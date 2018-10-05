@@ -1,0 +1,96 @@
+{
+  "users": [
+    {
+      "userid": 0,
+      "username": "user_0"
+    },
+    {
+      "userid": 1,
+      "username": "user_1"
+    },
+    {
+      "userid": 2,
+      "username": "user_2"
+    },
+    {
+      "userid": 3,
+      "username": "user_3"
+    },
+    {
+      "userid": 4,
+      "username": "user_4"
+    },
+    {
+      "userid": 5,
+      "username": "user_5"
+    },
+    {
+      "userid": 6,
+      "username": "user_6"
+    },
+    {
+      "userid": 7,
+      "username": "user_7"
+    },
+    {
+      "userid": 8,
+      "username": "user_8"
+    },
+    {
+      "userid": 9,
+      "username": "user_9"
+    }
+  ],
+  "posts": [
+    {
+      "userid": 0,
+      "postid": 0,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 1,
+      "postid": 1,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 2,
+      "postid": 2,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 3,
+      "postid": 3,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 4,
+      "postid": 4,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 5,
+      "postid": 5,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 6,
+      "postid": 6,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 7,
+      "postid": 7,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 8,
+      "postid": 8,
+      "data": "some dummy data"
+    },
+    {
+      "userid": 9,
+      "postid": 9,
+      "data": "some dummy data"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 package simpleserver;
 
+import com.google.gson.Gson;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -9,9 +10,12 @@ class SimpleServer {
   public static void main(String[] args) throws IOException {
     ServerSocket ding;
     Socket dong = null;
+    String mainLine = null;
     String resource = null;
+    Response badResponse = new Response();
+    badResponse.status = "ERROR";
     try {
-      ding = new ServerSocket(1299);
+      ding = new ServerSocket(1298);
       System.out.println("Opened socket " + 1299);
       while (true) {
 
@@ -29,6 +33,7 @@ class SimpleServer {
 
           // read the first line to get the request method, URI and HTTP version
           String line = in.readLine();
+          mainLine = line;
           System.out.println("----------REQUEST START---------");
           System.out.println(line);
           // read only headers
@@ -55,11 +60,25 @@ class SimpleServer {
         writer.println("HTTP/1.1 200 OK");
         writer.println("Server: TEST");
         writer.println("Connection: close");
-        writer.println("Content-type: text/html");
+        writer.println("Content-type: text/plain");
         writer.println("");
-
+//
         // Body of our response
-        writer.println("<h1>Some cool response!</h1>");
+        // put rest of logic here
+        // sanitize url
+        // separate query from resource
+        // then use factory
+        // processor.process()
+        //gson.toJson(response
+
+        // GET /hello HTTP/1.1
+
+        String[] requestParts = mainLine.split(" "); // [GET , /hello, HTTP/1.1]
+        String endpoint = requestParts[1];
+        ServerProcessor serverProcessor = ProcessFactory.getProcessor(endpoint);
+        writer.println(serverProcessor.process(endpoint));
+        //Gson gson = new Gson();
+        //writer.println(gson.toJson(badResponse));
 
         dong.close();
       }
